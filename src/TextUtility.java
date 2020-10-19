@@ -1,9 +1,8 @@
 
 public class TextUtility {
 
-public static void TextoEnMinúsculas(String Texto) {
-		System.out.println(Texto.toLowerCase());
-	}
+public static String TextoEnMinúsculas(String texto) {
+		return texto.toUpperCase();
 	
 	
 }
