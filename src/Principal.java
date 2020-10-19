@@ -1,4 +1,5 @@
 import java.awt.EventQueue;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 
@@ -20,6 +21,17 @@ public class Principal {
 				}
 			}
 		});
+		
+		// Llamada a la función
+		contarLetras();
+	}
+
+	// Función para introducir un texto y contar sus letras
+	private static void contarLetras() {
+			Scanner sc = new Scanner (System.in);
+			System.out.println("Introduce un texto.");
+			String contLetras = sc.nextLine();
+			System.out.println(contLetras.length());
 	}
 
 	/**
