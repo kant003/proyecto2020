@@ -1,9 +1,25 @@
+import java.io.*;
 
 public class TextUtility {
+		
+	public static String TextoEnMinúsculas(String texto) {
+		return texto.toUpperCase();
+	}
+	
+	/**
+	 * Funcion que recibe un texto y este se guarda en el fichero "historial.txt"
+	 * los textos guardados estan separados por un triple espacio en el fichero
+	 * 
+	 * @param textoRecibido String a guardar en el historial
+	 * @throws IOException
+	 */
+	public void guardarEnHistorial(String textoRecibido) throws IOException {
+		File historial = new File("historial.txt");
+		FileWriter fw = null;
 
-	public void	pasaraminuscula2(String cadena) {
-
-		System.out.println(cadena.toLowerCase());
+		fw = new FileWriter(historial, true);
+		fw.write("   " + textoRecibido);
+		fw.close();
 	}
 
 }
