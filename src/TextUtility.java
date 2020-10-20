@@ -21,5 +21,5 @@ public class TextUtility {
 		fw.write("   " + textoRecibido);
 		fw.close();
 	}
-	
+
 }
