@@ -1,8 +1,11 @@
 import java.io.*;
 
 public class TextUtility {
+		
+	public static String TextoEnMinúsculas(String texto) {
+		return texto.toUpperCase();
+	}
 	
-
 	/**
 	 * Funcion que recibe un texto y este se guarda en el fichero "historial.txt"
 	 * los textos guardados estan separados por un triple espacio en el fichero
