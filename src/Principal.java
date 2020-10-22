@@ -19,6 +19,7 @@ public class Principal {
 	private JTextField txtFrase;
 	private JLabel lblCaracParesImpares;
 	private JLabel lblExtensionCarac;
+	private JLabel contadorVocales;
 
 	/**
 	 * Launch the application.
@@ -62,6 +63,11 @@ public class Principal {
 		panel.setLayout(gbl_panel);
 
 		JButton btnCalcular = new JButton("Calcular");
+		btnCalcular.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				contadorVocales.setText(String.valueOf(TextUtility.contarVocales(txtFrase.getText())));
+			}
+		});
 		GridBagConstraints gbc_btnCalcular = new GridBagConstraints();
 		gbc_btnCalcular.insets = new Insets(0, 0, 5, 0);
 		gbc_btnCalcular.gridx = 0;
@@ -184,12 +190,12 @@ public class Principal {
 		gbc_lblTextSinVocales.gridy = 11;
 		panel_1.add(lblTextSinVocales, gbc_lblTextSinVocales);
 
-		JLabel lblContVocales = new JLabel("contador de vocales");
-		GridBagConstraints gbc_lblContVocales = new GridBagConstraints();
-		gbc_lblContVocales.insets = new Insets(0, 0, 5, 5);
-		gbc_lblContVocales.gridx = 1;
-		gbc_lblContVocales.gridy = 12;
-		panel_1.add(lblContVocales, gbc_lblContVocales);
+		contadorVocales = new JLabel("contador de vocales");
+		GridBagConstraints gbc_contadorVocales = new GridBagConstraints();
+		gbc_contadorVocales.insets = new Insets(0, 0, 5, 5);
+		gbc_contadorVocales.gridx = 1;
+		gbc_contadorVocales.gridy = 12;
+		panel_1.add(contadorVocales, gbc_contadorVocales);
 
 	
 

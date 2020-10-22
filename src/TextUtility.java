@@ -5,8 +5,8 @@ public class TextUtility {
 	
 	static Scanner sc = new Scanner(System.in);
 		
-	public static String TextoEnMinúsculas(String texto) {
-		return texto.toUpperCase();
+	public static String TextoEnMinusculas(String texto) {
+		return texto.toLowerCase();
 	}
 	
 	/**
@@ -25,6 +25,7 @@ public class TextUtility {
 		fw.close();
 	}
 	
+
 	public static int contarA(String cadena) {
         
 		
@@ -45,5 +46,20 @@ public class TextUtility {
 	
 	
 	
+
+	public static int contarVocales(String texto) {
+		int CuentaVocales=0;
+		String Vocales = "AEIOUaeiouáéíóú";
+		
+		for(int i = texto.length()-1; i >= 0; i--) {
+			for(int j = Vocales.length()-1; j >= 0; j--) {
+				if (texto.charAt(i) == Vocales.charAt(j)) {
+				CuentaVocales++;
+				}
+			}
+		}
+		return CuentaVocales;
+	}
+
 
 }
