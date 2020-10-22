@@ -21,5 +21,19 @@ public class TextUtility {
 		fw.write("   " + textoRecibido);
 		fw.close();
 	}
+	
+	public static int contarVocales(String texto) {
+		int CuentaVocales=0;
+		String Vocales = "AEIOUaeiouáéíóú";
+		
+		for(int i = texto.length()-1; i >= 0; i--) {
+			for(int j = Vocales.length()-1; j >= 0; j--) {
+				if (texto.charAt(i) == Vocales.charAt(j)) {
+				CuentaVocales++;
+				}
+			}
+		}
+		return CuentaVocales;
+	}
 
 }
