@@ -3,7 +3,7 @@ import java.io.*;
 public class TextUtility {
 		
 	public static String TextoEnMinusculas(String texto) {
-		return texto.toLowerCase());
+		return texto.toLowerCase();
 	}
 	
 	/**
@@ -24,7 +24,7 @@ public class TextUtility {
 	
 	public static int contarVocales(String texto) {
 		int CuentaVocales=0;
-		String Vocales = "AEIOUaeiouáéíóú";
+		String Vocales = "AEIOUaeiouÃ¡Ã©Ã­Ã³Ãº";
 		
 		for(int i = texto.length()-1; i >= 0; i--) {
 			for(int j = Vocales.length()-1; j >= 0; j--) {
