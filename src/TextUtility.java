@@ -35,5 +35,37 @@ public class TextUtility {
 		}
 		return CuentaVocales;
 	}
+/**
+	 * Método que recibe un texto y se devuelven un texto sin todos los espacios
+	 * escritos al principio y al final y también los espacios
+	 * múltiples(consecutivos) me los convierta en 1 solo espacio.
+	 * 
+	 * @param texto
+	 * @return texto sin espacios de más
+	 */
+
+	public static String borrarEspacios(String texto) {
+		String resultado = "";
+		int i;
+		int posicion1 = 0;
+		for (i = 0; i < texto.length(); i++) {
+			if (texto.charAt(i) != ' ') {
+				posicion1 = i;
+				while ((texto.charAt(i) != ' ') && (i < texto.length() - 1)) {
+					i++;
+				}
+
+				resultado += texto.substring(posicion1, i + 1);
+			}
+
+		}
+		if (resultado.charAt(resultado.length() - 1) == ' ') {
+			resultado = resultado.substring(0, resultado.length() - 1);
+
+		}
+
+		return resultado;
+
+	}
 
 }
