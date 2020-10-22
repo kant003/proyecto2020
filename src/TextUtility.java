@@ -2,8 +2,8 @@ import java.io.*;
 
 public class TextUtility {
 		
-	public static String TextoEnMinúsculas(String texto) {
-		return texto.toUpperCase();
+	public static String TextoEnMinusculas(String texto) {
+		return texto.toLowerCase());
 	}
 	
 	/**
