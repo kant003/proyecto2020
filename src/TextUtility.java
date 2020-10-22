@@ -1,6 +1,9 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class TextUtility {
+	
+	static Scanner sc = new Scanner(System.in);
 		
 	public static String TextoEnMinúsculas(String texto) {
 		return texto.toUpperCase();
@@ -21,5 +24,26 @@ public class TextUtility {
 		fw.write("   " + textoRecibido);
 		fw.close();
 	}
+	
+	public static int contarA(String cadena) {
+        
+		
+		int posicion, contador = 0;
+      
+        posicion = cadena.indexOf("a");
+        
+        while (posicion != -1) { 
+            contador++;           
+                              
+            posicion = cadena.indexOf("a", posicion + 1);
+        }
+        
+
+        return contador;
+        
+}
+	
+	
+	
 
 }
