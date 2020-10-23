@@ -1,8 +1,13 @@
 
 import java.util.regex.*;
 import java.io.*;
+import java.util.Scanner;
 
 public class TextUtility {
+
+	
+	static Scanner sc = new Scanner(System.in);
+		
 
 	public boolean ComprobarDni(String dni) {
 
@@ -39,6 +44,28 @@ public class TextUtility {
 		fw.close();
 	}
 	
+
+	public static int contarA(String cadena) {
+        
+		
+		int posicion, contador = 0;
+      
+        posicion = cadena.indexOf("a");
+        
+        while (posicion != -1) { 
+            contador++;           
+                              
+            posicion = cadena.indexOf("a", posicion + 1);
+        }
+        
+
+        return contador;
+        
+}
+	
+	
+	
+
 	public static int contarVocales(String texto) {
 		int CuentaVocales=0;
 		String Vocales = "AEIOUaeiouÃ¡Ã©Ã­Ã³Ãº";
@@ -54,12 +81,12 @@ public class TextUtility {
 
 	}
 /**
-	 * Método que recibe un texto y se devuelven un texto sin todos los espacios
-	 * escritos al principio y al final y también los espacios
-	 * múltiples(consecutivos) me los convierta en 1 solo espacio.
+	 * Mï¿½todo que recibe un texto y se devuelven un texto sin todos los espacios
+	 * escritos al principio y al final y tambiï¿½n los espacios
+	 * mï¿½ltiples(consecutivos) me los convierta en 1 solo espacio.
 	 * 
 	 * @param texto
-	 * @return texto sin espacios de más
+	 * @return texto sin espacios de mï¿½s
 	 */
 
 	public static String borrarEspacios(String texto) {
@@ -85,5 +112,6 @@ public class TextUtility {
 		return resultado;
 
 	}
+
 
 }
