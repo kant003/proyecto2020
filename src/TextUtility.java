@@ -62,8 +62,16 @@ public class TextUtility {
         return contador;
         
 }
+	//METODO PARA QUITAR LAS VOCALES DE UN TEXTO
 	
-	
+	public String quitarVocales(String cadena) {
+
+		String sinVocales = "";
+
+		sinVocales = cadena.replaceAll("a,A,e,E,i,I,o,O,U,u", "");
+
+		return sinVocales;
+		}
 	
 
 	public static int contarVocales(String texto) {
